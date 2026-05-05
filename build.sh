@@ -23,3 +23,10 @@ export PATH="${HOME}/bin:${PATH}"
 
 cd crates/family-tree-app
 trunk build
+
+# Clean up the workspace target/ — it contains 50+ MiB of debug WASM that
+# Cloudflare's deploy validation rejects if the build output directory is
+# misconfigured (Pages limits individual files to 25 MiB). Removing it
+# here makes the build resilient to the output-dir setting being wrong.
+cd ../..
+rm -rf target/
