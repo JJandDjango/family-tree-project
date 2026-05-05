@@ -61,10 +61,21 @@ body {
     min-width: 100%;
 }
 
+/* Card base */
 .person-card {
     cursor: pointer;
     transition: transform 80ms ease-out;
 }
+
+.person-card .card-bg {
+    fill: #ffffff;
+    stroke: #475569;
+    stroke-width: 1.5;
+}
+
+.person-card .card-name { fill: #0f172a; }
+.person-card .card-dates { fill: #475569; }
+.person-card .card-role  { fill: #64748b; }
 
 .person-card:hover .card-bg {
     fill: #e0f2fe;
@@ -77,6 +88,40 @@ body {
     stroke-width: 2.5;
 }
 
+/* Anonymized (living relatives shown as Father/Mother/Brother/Sister) */
+.person-card.anonymized .card-bg {
+    fill: #f8fafc;
+    stroke: #94a3b8;
+    stroke-dasharray: 5 4;
+}
+.person-card.anonymized .card-name { fill: #475569; font-style: italic; }
+.person-card.anonymized .card-role  { fill: #94a3b8; }
+
+/* Deceased — subtle muted look */
+.person-card.deceased .card-bg {
+    fill: #fafaf9;
+    stroke: #57534e;
+}
+.person-card.deceased .card-name { fill: #292524; }
+.person-card.deceased .card-dates { fill: #78716c; }
+
+/* Focus person (you) — accented */
+.person-card.focus .card-bg {
+    fill: #fef3c7;
+    stroke: #b45309;
+    stroke-width: 2;
+}
+.person-card.focus .card-name { fill: #78350f; font-weight: 700; }
+.person-card.focus .card-dates { fill: #92400e; }
+.person-card.focus .card-role  { fill: #a16207; }
+
+.person-card.focus.selected .card-bg {
+    fill: #fde68a;
+    stroke: #92400e;
+    stroke-width: 2.5;
+}
+
+/* Side panel */
 .side-panel {
     width: 0;
     background: #ffffff;

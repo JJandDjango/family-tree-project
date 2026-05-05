@@ -1,56 +1,54 @@
 {
-  "root": "pierre",
+  "focus": "johnathan",
   "people": {
-    "pierre": {
-      "name": "Pierre Curie",
-      "birth": "1859",
-      "death": "1906",
-      "spouse": "marie",
-      "children": ["irene", "eve"],
-      "notes": "Nobel laureate in Physics (1903) for research on radioactivity, jointly with Marie Curie and Henri Becquerel."
+    "donald_sr": {
+      "name": "Donald Hyden Sr.",
+      "deceased": true,
+      "spouse": "patricia"
     },
-    "marie": {
-      "name": "Marie Skłodowska-Curie",
-      "birth": "1867",
-      "death": "1934",
-      "notes": "First woman to win a Nobel Prize and the only person to win Nobel Prizes in two different sciences (Physics 1903, Chemistry 1911)."
+    "patricia": {
+      "name": "Patricia Dennler",
+      "deceased": true,
+      "spouse": "donald_sr"
     },
-    "irene": {
-      "name": "Irène Joliot-Curie",
-      "birth": "1897",
-      "death": "1956",
-      "spouse": "frederic",
-      "children": ["helene", "pierre_j"],
-      "notes": "Nobel laureate in Chemistry (1935), shared with her husband Frédéric for their discovery of artificial radioactivity."
+    "milton": {
+      "name": "Milton Daly",
+      "deceased": true,
+      "spouse": "juanita"
     },
-    "frederic": {
-      "name": "Frédéric Joliot-Curie",
-      "birth": "1900",
-      "death": "1958",
-      "notes": "Nobel laureate in Chemistry (1935). Took the name Joliot-Curie upon marriage."
+    "juanita": {
+      "name": "Juanita Chamberlain",
+      "deceased": true,
+      "spouse": "milton"
     },
-    "helene": {
-      "name": "Hélène Langevin-Joliot",
-      "birth": "1927",
-      "notes": "French nuclear physicist; researcher at the Institut de Physique Nucléaire."
+    "father": {
+      "name": "Father",
+      "anonymized": true,
+      "parents": ["donald_sr", "patricia"],
+      "spouse": "mother"
     },
-    "pierre_j": {
-      "name": "Pierre Joliot",
-      "birth": "1932",
-      "notes": "French biologist specializing in photosynthesis."
+    "mother": {
+      "name": "Mother",
+      "anonymized": true,
+      "parents": ["milton", "juanita"],
+      "spouse": "father"
     },
-    "eve": {
-      "name": "Ève Curie",
-      "birth": "1904",
-      "death": "2007",
-      "spouse": "henry",
-      "notes": "Author of the Madame Curie biography; war correspondent and UNICEF special advisor."
+    "brother": {
+      "name": "Brother",
+      "anonymized": true,
+      "parents": ["father", "mother"]
     },
-    "henry": {
-      "name": "Henry R. Labouisse Jr.",
-      "birth": "1904",
-      "death": "1987",
-      "notes": "American diplomat; executive director of UNICEF, accepted the 1965 Nobel Peace Prize on its behalf."
+    "johnathan": {
+      "name": "Johnathan Hyden",
+      "birth": "1990",
+      "place": "Cincinnati, Ohio",
+      "parents": ["father", "mother"],
+      "notes": "Built this site. Software engineer based in Alabama."
+    },
+    "sister": {
+      "name": "Sister",
+      "anonymized": true,
+      "parents": ["father", "mother"]
     }
   }
 }

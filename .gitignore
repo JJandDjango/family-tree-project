@@ -1,5 +1,6 @@
 target/
 dist/
+private/
 **/*.rs.bk
 *.pdb
 .DS_Store
