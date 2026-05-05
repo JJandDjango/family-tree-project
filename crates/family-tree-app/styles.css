@@ -1,0 +1,154 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+.app-header {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 14px 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.app-header .subtitle {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.tree-container {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+    background: #f8fafc;
+}
+
+.tree-svg {
+    flex: 1;
+    min-width: 0;
+    overflow: auto;
+    padding: 24px;
+}
+
+.tree-svg svg {
+    display: block;
+    min-width: 100%;
+}
+
+.person-card {
+    cursor: pointer;
+    transition: transform 80ms ease-out;
+}
+
+.person-card:hover .card-bg {
+    fill: #e0f2fe;
+    stroke: #0369a1;
+}
+
+.person-card.selected .card-bg {
+    fill: #bae6fd;
+    stroke: #0369a1;
+    stroke-width: 2.5;
+}
+
+.side-panel {
+    width: 0;
+    background: #ffffff;
+    border-left: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: width 200ms ease-out;
+    flex-shrink: 0;
+}
+
+.side-panel.open {
+    width: 340px;
+}
+
+.panel-content {
+    padding: 24px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.panel-content h2 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.panel-content .dates {
+    margin: 0 0 18px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.panel-content .meta {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.panel-content .meta-label {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.panel-content .notes {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #334155;
+}
+
+.close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.close-btn:hover {
+    background: #f1f5f9;
+    color: #475569;
+}
